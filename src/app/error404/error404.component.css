@@ -1,0 +1,26 @@
+h1{
+    color:#00aee7;
+    margin-left: 420px;
+    padding-top: 30px;
+    font-weight: bold italic;
+    text-shadow: 2px 2px 5px #ffffff;
+    font-family: Autour One;
+    font-size: 60px;
+}
+.body{
+background-image: url('https://www.asus.com/websites/global/products/ysdirWkLOLB8epF3/img/background_p1_1.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+label{
+    color:#00aee7;
+    margin-left: 420px;
+    padding-top: 30px;
+    font-weight: bold italic;
+    text-shadow: 2px 2px 5px #ffffff;
+    font-family: Autour One;
+    font-size: 60px;
+    
+}

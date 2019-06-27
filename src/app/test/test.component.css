@@ -1,0 +1,46 @@
+input[type="radio"]{
+    color:#ffffff;
+    border: 3px solid #ffffff;
+}
+h1{
+    margin-left: 400px;
+}
+.qn{
+    margin-left: 100px;
+    padding-top: 10%;
+    font-size: 180%;
+}
+.test{
+display: block;
+}
+.q2{
+    display: none;
+}
+.ans{
+    border:1px solid #ffffff;
+    font-size: 180%;
+}
+.button {
+    display:inline-block;
+    border-radius: 4px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    margin-left:900px;
+  }
+.codeans{
+    padding-bottom:30%;
+    border:none;
+    border-bottom:2px solid #FFFFFF;
+    background-color:transparent;
+    width:90%;
+    color:#ffffff;
+}
+  

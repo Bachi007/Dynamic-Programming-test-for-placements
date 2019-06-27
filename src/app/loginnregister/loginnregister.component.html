@@ -1,0 +1,54 @@
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+<div class="body">
+  <h1 style="margin-left:470px">Code Warrior!</h1>
+<div class="container">
+	<div class="d-flex justify-content-center h-100">
+		<div class="card">
+			<div class="card-header">
+				<h3 style="text-align: center">Sign in</h3> 
+			
+			</div>
+			<br>
+			<div class="card-body">
+					<form name="form" (ngSubmit)="f.form.valid && submit()" #f="ngForm" novalidate>
+							<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
+									<label for="username" style="color: #ffff">Username</label>
+									<div class="input-group form-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text" style="background-color:white;"><i class="fas fa-user"></i></span>
+											</div>
+										
+									<input type="text" class="form-control" placeholder="Username" name="user" [(ngModel)]="username" #name="ngModel" required />
+									<div *ngIf="f.submitted && !name.valid" class="help-block" style="color:#ef4048">Username is required</div>
+							</div>
+							<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !pwd.valid }">
+									<label for="password" style="color: #ffff">Password</label>
+									<div class="input-group form-group">
+											<div class="input-group-prepend">
+												<span class="input-group-text" style="background-color:white;"><i class="fas fa-key"></i></span>
+											</div>
+									<input type="password" placeholder="password" class="form-control" name="pass" [(ngModel)]="password" #pwd="ngModel" required />
+									<div *ngIf="f.submitted && !pwd.valid" class="help-block" style="color:#ef4048">Password is required</div>
+								</div>
+							<div class="form-group">
+									<button type="submit" [disabled]="!f.form.valid"  class="btn btn-primary btn-block btn-raised">Login <i *ngIf="f.submitted&&f.form.valid&&!errorMessage" class="fa fa-spinner fa-spin"></i></button>
+							 
+							</div>
+					
+					<br>
+					
+				<span style="color:red;text-align: center"> {{errorMessage}}</span>	
+				<div class="d-flex justify-content-center links">
+					Don't have an account?<a routerLink="/signup" >Sign Up</a>
+				</div>
+				<div class="d-flex justify-content-center">
+					<!-- <a routerLink="/fpw" style="color:#ffff">Forgot your password?</a> -->
+				</div>
+			</div>
+			
+<!-- 	
+	</div>
+</div>
+</div> -->
+<!-- <footer><marquee style="color: white;">&#169;2019 Miracle Software Systems</marquee></footer> -->

@@ -1,0 +1,76 @@
+#include<stdio.h>
+void main(){
+int a=2,b=3,c;
+c=a+b;
+printf(c);
+}
+
+#include<stdio.h>
+void main(){
+printf("hello world");
+}
+
+
+#include <stdio.h>
+ 
+int main()
+{
+  int x=3, y=2, t;
+ 
+ 
+  printf("Before Swapping\nFirst integer = %d\nSecond integer = %d\n", x, y);
+ 
+  t = x;
+  x = y;
+  y = t;
+ 
+  printf("After Swapping\nFirst integer = %d\nSecond integer = %d\n", x, y);
+ 
+  return 0;
+}
+
+#include <stdio.h>
+int main()
+{
+    int n=111, reversedInteger = 0, remainder, originalInteger;
+
+
+    originalInteger = n;
+
+    // reversed integer is stored in variable 
+    while( n!=0 )
+    {
+        remainder = n%10;
+        reversedInteger = reversedInteger*10 + remainder;
+        n /= 10;
+    }
+
+    // palindrome if orignalInteger and reversedInteger are equal
+    if (originalInteger == reversedInteger)
+        printf("%d is a palindrome.", originalInteger);
+    else
+        printf("%d is not a palindrome.", originalInteger);
+    
+    return 0;
+}
+
+print('hello world')
+
+
+import java.io.*;
+public class hello{
+public static void main(String args[])
+{
+System.out.println("hello world");
+}
+}
+
+import java.io.*;
+public class hello{
+public static void main(String args[])
+{
+int a=2,b=3,c;
+c=a+b;
+System.out.println(c);
+}
+}

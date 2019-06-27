@@ -1,0 +1,51 @@
+/* button{
+    background-color:#00aee7;
+   padding:10px; 
+   border-radius: 25px;
+   outline: none;
+} */
+/* 
+img{
+    height: 30%;
+    width:30%;
+    margin-left:500px;
+}  */
+
+  
+/* 
+.info{
+    display: none;
+
+}
+.recents{
+    display: none;
+    
+}
+.settings{
+    display: none;
+} */
+.recents{
+    margin-left: 400px;
+    color:black;
+    
+}
+.updatename{
+    display: none;
+    
+}
+
+.updatepass{
+    display: none;
+    
+}
+.updatemail{
+    display: none;
+    
+}
+.fabtn{
+    background-color: transparent;
+    border:none;
+    color:white;
+}
+
+

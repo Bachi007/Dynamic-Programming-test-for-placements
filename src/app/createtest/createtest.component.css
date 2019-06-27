@@ -1,0 +1,15 @@
+.tests{
+  color:blue;
+}
+a{
+  text-decoration: none;
+  color:white;
+}
+label{
+  background-color: #00aee7;
+  color:white;
+  border:2px solid white;
+  width:142px;
+  text-align: center;
+
+}

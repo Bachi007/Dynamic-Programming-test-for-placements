@@ -1,0 +1,184 @@
+input[type="text"]{
+    border:none;
+    border-bottom: 2px solid #ffffff;
+    color:#ffffff;
+    background-color: transparent;  
+}
+body{
+    background-color:#71d1f4;
+}
+#next{
+    display:none;
+}
+#sub{
+    display: none;
+}
+.front{
+    margin:2%;
+    outline:5px solid #71d1f4;
+    padding:5%;
+    height:335px;
+    padding-top:40%;
+    text-align: center;
+    background-color: white;
+    color:#71d1f4;
+    font-family: 'Yeseva One', cursive;
+
+}
+.answers{
+    margin:2%;
+    margin-top:5%;
+    padding:5%;
+    align-self: center;
+    background-color: white;
+    display:none;
+    color:#71d1f4;
+    border:5px solid white;
+    font-family: 'Rokkitt', serif;
+    font-size:20px;
+}
+.qa{
+    color:#71d1f4;
+}
+.quiz{
+    margin:2%;
+    margin-top:5%;
+    padding:5%;
+    align-self: center;
+    background-color: #71d1f4;
+    display:none;
+    color:#40c2f2;
+    border:5px solid white;
+    font-family: 'Rokkitt', serif;
+}
+.result{
+    margin:2%;
+    padding:5%;
+    padding-top:40%;
+    height:330px;
+    text-align: center;
+    background-color: white;
+    display: none;
+    font-family: 'Rokkitt', serif;
+
+}
+input[type="radio"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+.radio{
+     
+     
+     padding-bottom:4%;
+     
+}
+.radio label:before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height:15px;
+  margin-right: 0.5em;
+  vertical-align: -3px;
+  border: 2px solid #666666;
+  padding: 0.13em;
+  background-color: transparent;
+  background-clip: content-box;
+
+}
+.radio label {
+  margin-right: 1em;
+}
+.radio input:hover + label:before {
+  border-color: #71d1f4;
+}
+.radio input:checked + label:before {
+  background-color: #71d1f4;
+  border-color: #71d1f4;
+}
+.arrow{
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 24px solid white;
+    position: relative;
+    left:30px;
+
+}
+#q{
+    background-color: white;
+    padding-top:10px;
+    padding-left:10px; 
+    padding-bottom:10px;
+    font-size:22px;
+    font-weight: bold;
+    border-radius:5px;
+    
+}
+#op1,#op2,#op3,#op4{
+    background-color: white;
+    margin-bottom:2.5%;
+    padding:5px;
+    padding-left: 4%;
+    border-radius:5px;
+    font-size:22px;
+}
+#op1:hover,#op2:hover,#op3:hover,#op4:hover{
+    background-color:#ffff99;
+}
+#num{
+    background-color:white;
+    font-size:20px;
+    border-radius:30px;
+    padding-left:2%;
+    color:#40c2f2;
+    width:45px;
+
+}
+#sub{
+    background-color: white;
+    padding: 8px;
+    border-radius:5px;
+    border:none;
+    width:200px;
+    font-size:20px;
+    color: #40c2f2;
+}
+#start{
+    background-color: #71d1f4;
+    color:white;
+    padding:8px;
+    font-size:20px;
+    border:none;
+    width:200px;
+    border-radius:5px;
+
+}
+.score{
+    font-size:21px;
+    font-weight: bolder;
+    color: #40c2f2;
+}
+.message{
+    font-size: 20px;
+    color: #40c2f2;
+}
+.cer{
+
+    font-size: 20px;
+    color: #40c2f2;
+
+}
+.answers{
+    display: none;
+}
+#a1,#a2,#a3,#a3,#a4,#a5,#a6,#a7,#a8,#a9,#a10{
+    color:#80ff00;
+    font-weight: bold;
+}

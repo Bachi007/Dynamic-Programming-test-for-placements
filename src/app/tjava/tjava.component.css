@@ -1,0 +1,29 @@
+.codeans{
+    color:balck;
+    outline-color: black;
+    padding-bottom:30%;
+  margin-left:7px; 
+    border-bottom:2px solid #000000;
+    background-color:transparent;
+    width:90%;
+}
+span{
+    color:black;
+    font-size:30px;
+    margin-top:40px;
+    margin-left:100px;
+}
+.item{
+    width:700px!important;
+    height:100px!important
+}
+.btn-primary{
+    margin-top:5%
+}
+.showquery{
+    color: #333333;font-size:120%;text-align:left;margin-top:5%;margin-left:7px
+}
+.response{
+    border:0px solid #000000;
+
+}

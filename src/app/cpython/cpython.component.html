@@ -1,0 +1,19 @@
+<h1 style="color:black">
+    Create Python Question
+</h1>
+<div>
+<input   type="text"  style="width: 90%;height:50px;margin-left:3%" placeholder="Enter question here" [(ngModel)]="qtn">
+
+<button type="submit" class="button btn-primary" style="margin-top: 3%;margin-left:450px"  (click)="submit(content)"> Add question</button>
+<!-- <button class="button" btn-primary style="vertical-align:middle"> Save & Exit </button> -->
+<ng-template #content let-modal>
+  <div class="modal-header" style="background-color:#233242">
+    <h4 class="modal-title" id="modal-basic-title" style="color:#ffff">Success</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true" style="font-size:16px;outline:none;color:#ffff">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    Successfully added the question
+ 
+</div>

@@ -1,0 +1,46 @@
+<div class="chart" style="margin-top: 10%">
+    <div flex-gt-px="50">
+        <div class="pad">
+          <div [style.height.px]="250">
+            <ngx-charts-bar-vertical
+              [results]="single"
+              [view]=[500,250]
+              [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+              [barPadding]="10"
+              [gradient]="true"
+              [xAxis]="true"
+              [yAxis]="true"
+              [legend]="true"
+              [legendTitle]="'Legenda'"
+              [xAxisLabel]="'Tests'"
+              [yAxisLabel]="'No.of Completed tests'"
+              [showXAxisLabel]="true"
+              [showYAxisLabel]="true">
+            </ngx-charts-bar-vertical>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="chart2" style="margin-top: 10%">
+      <div flex-gt-px="50">
+          <div class="pad">
+            <div [style.height.px]="250">
+              <ngx-charts-bar-vertical
+                [results]="double"
+                [view]=[500,250]
+                [scheme]="{ domain: [ '#30E07B', '#E75691', '#00C0FF', '#5D6A75' ] }"
+                [barPadding]="10"
+                [gradient]="true"
+                [xAxis]="true"
+                [yAxis]="true"
+                [legend]="true"
+                [legendTitle]="'Legenda'"
+                [xAxisLabel]="'Selected language'"
+                [yAxisLabel]="'Registered users'"
+                [showXAxisLabel]="true"
+                [showYAxisLabel]="true">
+              </ngx-charts-bar-vertical>
+            </div>
+          </div>
+        </div>
+      </div>
