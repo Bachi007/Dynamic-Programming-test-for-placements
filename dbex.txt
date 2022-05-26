@@ -1,0 +1,8 @@
+{
+	
+	"role":"Full stack developer",
+	"email":"chitturi.bhaskar007@gmail.com",
+	"username":"Bhaskarasai chitturi",
+	"password":"2505",
+	"passwordConf":"2505"
+}

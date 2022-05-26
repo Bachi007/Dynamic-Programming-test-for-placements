@@ -1,0 +1,51 @@
+<div class="body">
+    <h1 style="margin-left:500px">Code Warrior!</h1>
+  <div class="container">
+    <div class="d-flex justify-content-center h-100">
+      <div class="card">
+        <div class="card-header">
+          <h3 style="text-align: center">Signup</h3> 
+        
+        </div>
+        <br>
+        <div class="card-body">
+            <form name="form" (ngSubmit)="f.form.valid && signup()" #f="ngForm" novalidate>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !email.valid }">
+                    <label for="username" style="color: #ffff">Email</label>
+                    
+                    <input type="email" class="form-control" placeholder="&#xf0e0;" name="useremail" [(ngModel)]="useremail" #email="ngModel" required />
+                    <div *ngIf="email.touched && !email.valid" class="help-block" style="color:#ef4048">Email is required</div>
+                </div>
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !name.valid }">
+                    <label for="username" style="color: #ffff">Username</label>
+                    
+                    <input type="text" class="form-control" placeholder="&#xF007;" name="user" [(ngModel)]="username" #name="ngModel" required />
+                    <div *ngIf="name.touched && !name.valid" class="help-block" style="color:#ef4048">Username is required</div>
+                </div>
+                
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !pwd.valid }">
+                    <label for="password" style="color: #ffff">Password</label>
+                    <input type="password" placeholder="&#xf13e;" class="form-control" name="pass" [(ngModel)]="Password" #pwd="ngModel" required />
+                    <div *ngIf="pwd.touched && !pwd.valid" class="help-block" style="color:#ef4048">Password is required</div>
+                </div>
+                
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !cpwd.valid }">
+                  <label for="password" style="color: #ffff">Confirm password</label>
+                  <input type="password" class="form-control" placeholder="&#xf023;" name="cpass" [(ngModel)]="Cpassword" #cpwd="ngModel" required />
+                  <div *ngIf="cpwd.tocuhed && !cpwd.valid" class="help-block" style="color:#ef4048">Password is required</div>
+              </div>
+                <div class="form-group">
+                  <a routerLink="/loginnregister" style="color: white">&lt;&lt;Back to Login</a>
+                    <button [disabled]="!f.form.valid" style="margin-left:122px" class="btn btn-primary">Signup</button>
+                 
+                </div>
+            </form>
+          <span style="color:red;text-align: center"> {{errorMessage}}</span>	
+          <br><br>
+          <br> 
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br><br>
+  </div>

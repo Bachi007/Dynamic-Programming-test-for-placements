@@ -1,0 +1,38 @@
+.welcome{
+    color:black;
+    margin-left:900px;
+    font-size:20px;
+    
+    }
+    pre{
+        font-family: Lato;
+    }
+    .title{
+        color:black;
+        font-family: Lato;;
+        font-size: 60px;
+        float:right;
+    }
+    span{
+        color:black;
+    }
+    .mission{
+        margin-top: 90px;
+        font-size:20px;
+        color:black;
+    }
+    .moto{
+        letter-spacing: 8px;
+        margin-top:30px;
+        margin-left:300px;
+        color:black;
+    }
+    button{
+        background-color: #00aee7;
+        border:none;
+        outline: none;
+        color:#ffffff;
+        margin-left:450px;
+    }
+    
+    

@@ -1,0 +1,68 @@
+
+<mat-sidenav-container class="sidenav-container" >
+  <mat-sidenav   *ngIf="auth.isLoggedIn()"  #drawer class="sidenav" fixedInViewport="true"
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="!(isHandset$ | async)">
+    <mat-toolbar *ngIf="auth.isLoggedIn()"><img src="http://miraclesoft.com/images/newsletters/logo.png" style="width:80%;height:60%"></mat-toolbar>
+    <mat-nav-list>
+        <a mat-list-item  *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink='/admin/admindashboard'>
+          <i class="fa fa-dashboard" style="font-size
+          :24px;color:white"></i>&nbsp;Dashboard</a>
+          <!-- <a mat-list-item  *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink='/admin/statistics'>
+<i class="fa fa-bar-chart" style="font-size:24px"></i>&nbsp;Statistics</a><br> -->
+      <a mat-list-item  *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink='/admin/createtest'>
+        <i class="fa fa-edit" style="font-size:24px;color:white"></i>&nbsp;Createtest</a>
+        <a mat-list-item  *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink='/admin/viewqns'>     
+          <i class="fa fa-clipboard" style="font-size:24px"></i>&nbsp;View Questions</a>
+        <a mat-list-item  *ngIf="auth.isLoggedIn() && auth.isAdmin()" routerLink='/admin/viewstudent'>     
+        <i class="fa fa-eye" style="font-size:24px"></i>&nbsp;View Student</a>
+      <a mat-list-item *ngIf="auth.isLoggedIn() && !auth.isAdmin()" routerLink='/user/userdashboard'>
+        <i class="fa fa-dashboard" style="font-size:20px;color:white"></i>&nbsp;Dashboard</a>
+      
+      <a mat-list-item *ngIf="auth.isLoggedIn() && !auth.isAdmin()" routerLink='/user/taketest'>
+        <i class="fa fa-file-code-o" style="font-size:20px"></i>&nbsp;Take Test</a>
+        
+      <a mat-list-item *ngIf="auth.isLoggedIn() && !auth.isAdmin()" routerLink='/user/score'>
+        <i class="fa fa-check" style="font-size:20px"></i>&nbsp;Scorecard</a>
+     
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" *ngIf="auth.isLoggedIn()" style="height:15%">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="show(drawer)"
+        *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">Miracle</mat-icon>
+               </button>
+            <h1 class="heading">Code Warrior!&nbsp;</h1>
+            <div style="margin-left:800px">
+       <!-- <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>-->
+            </div> 
+          <div style="margin-left:00px"> 
+
+      <div class="dropdown">
+          <span class="dropbtn" style="color: #ffff">Welcome&nbsp;{{Username}}
+            <i class="fa fa-caret-down"></i>
+          </span>
+          <div class="dropdown-content">
+            
+            <!-- <a routerLink="/admin/adminprofile">Profile</a> -->
+            <a  (click)="logout()"> Logout</a>
+          </div>
+        </div>       
+  </div>
+    </mat-toolbar>
+    
+      <router-outlet></router-outlet>
+
+        </mat-sidenav-content>
+        
+          </mat-sidenav-container>
+          <footer *ngIf="auth.isLoggedIn()"><span style="color: white;margin-top:600%;margin-left:600px;height:50%;">&#169;2019 Miracle Software Systems</span></footer>
+

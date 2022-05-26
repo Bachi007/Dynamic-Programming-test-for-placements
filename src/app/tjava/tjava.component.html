@@ -1,0 +1,79 @@
+<div *ngIf="!showResult">
+  <div *ngIf="question==''">
+    <img style="margin-left:450px;margin-top:15%" src="/assets/images/3.gif" />
+  </div>
+  <div *ngIf="question!=''">
+
+    <form name="form" #f="ngForm" novalidate *ngFor="let query of pagedItems let i=index">
+
+      <div *ngIf="question!=''">
+        <p class="showquery">({{showindex+1}}/{{questioncount}}).{{query.question}} &nbsp; <span
+            style="color: black;font-size:15px;margin-left: 200px">
+            <p>{{timeLeft}} Seconds Left....</p>
+            <!-- <countdown #countdown  [config]="{leftTime: 15, demand: true}" (finished)="finishTest()">$!h!:$!m!:$!s!</countdown> -->
+          </span>
+        </p>
+
+        <textarea class="codeans" name="answer" [(ngModel)]="answer" #ans="ngModel" required
+          [ngClass]="{ 'has-error': ans.touched && !ans.valid }"></textarea>
+        <!-- <span>Console :</span> 
+         <span style="color:black;" class="response">{{Response}}</span> -->
+
+        <!-- <button type="submit"  class="button btn-primary"  [disabled]="!f.form.valid"  style="vertical-align:middle" (click)="checkAnswer(i)">Submit</button>  -->
+        <div class="row">
+          <!-- <div class="col-md-6">
+            <button class="btn btn-success" type="submit" [disabled]="!f.form.valid||!timeon" style="margin-left:450px" *ngIf="i+1<showQuestions.length"
+              (click)="saveAnswer()">Submit</button>
+          </div> -->
+          <div class="col-md-6">
+            <button class="btn btn-primary" (click)="checkAnswer()" style="margin-top: auto;">Next</button>
+            <!-- <button class="btn btn-primary" *ngIf="nexttime" (click)="saveAnswer()" style="margin-top: auto;">Next</button> -->
+          </div>
+        </div>
+      </div>
+    </form>
+
+  </div>
+</div>
+
+
+<div *ngIf="showResult" class="col-sm-2" style="margin-left:2px">
+  <p style="color:cornflowerblue;font-size:200%;margin-left:3px;margin-top:1%"> Congrats! you have score {{testScore}}/{{2*this.questioncount}}</p>
+  <div class="container">
+    <div class="item-margin">
+
+    </div>
+    <div class="item">
+      <!-- <ngx-charts-pie-chart class="test" [scheme]="colorScheme" [results]="single" [gradient]="gradient" [legend]="showLegend"
+                           [doughnut]="true" [tooltipDisabled]="true" (select)="onSelect($event)">
+                          </ngx-charts-pie-chart> -->
+    </div>
+    <div class="item">
+      <canvas class="chart" baseChart chartType="doughnut" [data]="doughnutChartData" [labels]="doughnutChartLabels"
+        [legend]="true">
+      </canvas>
+    </div>
+  </div>
+  <table class="table table-bordered " style="margin-left:750px">
+    <thead class="thead-dark">
+      <tr>
+
+        <th scope="col">Number Of Questions Attempted</th>
+        <th scope="col">Right Ansewrs</th>
+        <th scope="col">Wrong Ansewrs</th>
+        <th scope="col">score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">{{questioncount}}</th>
+        <td>{{testScore}}</td>
+        <td>{{wrongAnswers}}</td>
+        <td>{{testScore}}</td>
+      </tr>
+
+    </tbody>
+  </table>
+  <p style="color:black;margin-top:250px;margin-left:150px"><a routerLink="/user/score" style="color:cornflowerblue">
+      click Here </a> to view the Score card</p>
+</div>

@@ -1,0 +1,22 @@
+<div class="body">
+
+<h2 style="color:black">Registered Users</h2>
+<div *ngIf="user==''">
+  <img style="margin-left:450px;margin-top:15%" src="/assets/images/3.gif"/>
+  </div>
+  <div *ngIf="user!=''">
+      <table class="table table-striped table-bordered" >
+          <thead class="thead-dark">
+          <tr>
+          <th>User</th>
+          <th>Email</th>
+          
+          </tr>
+          </thead>
+          <tr *ngFor="let query of user">
+            
+            <td>{{query.username}}</td> 
+           <td>{{query.email}}</td>
+          
+         </tr>
+</table>
