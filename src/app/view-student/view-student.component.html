@@ -9,14 +9,22 @@
           <thead class="thead-dark">
           <tr>
           <th>User</th>
-          <th>Email</th>
-          
+          <th>Language</th>
+          <th>Score</th>
           </tr>
           </thead>
-          <tr *ngFor="let query of user">
+          <!-- <tr *ngFor="let query of user">
             
             <td>{{query.username}}</td> 
            <td>{{query.email}}</td>
           
-         </tr>
-</table>
+         </tr> -->
+         <tr *ngFor="let query of userScore">
+            
+          <td>{{query[0].username}}</td> 
+          <td>{{query[0].language}}</td> 
+         <td>{{query[0].score}}</td>
+         
+        
+       </tr>
+</table> 
