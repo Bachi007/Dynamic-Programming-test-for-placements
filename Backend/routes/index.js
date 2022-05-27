@@ -509,7 +509,7 @@ router.post('/insertScore', function (req, res) {
 	console.log('resquest',req.body)
 	mongoose.connect(url, function (err, db) {
 		if (err) throw err;
-		User.findOneAndUpdate({username:req.body.user}, {$push:{Scores:[{language:req.body.language,score:req.body.score}]}}, {new: true}, (err, doc) => {
+		User.findOneAndUpdate({username:req.body.user}, {$push:{Scores:[{username:req.body.user,language:req.body.language,score:req.body.score}]}}, {new: true}, (err, doc) => {
 			if (err) {
 				var response="Something wrong when updating data!"
 				
