@@ -1,4 +1,10 @@
+
 # Dynamic Programming test for placements
+
+# About Project
+# Dynamic Programming test for placements platform is prepared to practice the online coding challenges to crack the placements and hackathons etc. it helps the students to practice and check their coding skills in particular domain
+
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
